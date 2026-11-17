@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citroën Warnes | Repuestos y taller para Citroën · Darwin 37, Villa Crespo</title>
+<meta name="description" content="Repuestos para Citroën y taller mecánico en Darwin 37, Villa Crespo, CABA. Lunes a viernes de 8 a 18 y sábados de 8 a 14.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#DCE9EC;--teal:#1F6E74;--deep:#123E44;--white:#FFFFFF;--line:#B4CDD1;--muted:#4C6A6E}
+*{box-sizing:border-box;margin:0}
+body{background:var(--sky);color:var(--deep);font:400 1.0625rem/1.6 "Bricolage Grotesque",system-ui,sans-serif}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0}
+.name{font-weight:800;font-size:1.3rem;text-decoration:none;color:var(--deep)}
+.tel{font-weight:600;text-decoration:none;color:var(--deep);border:2px solid var(--deep);padding:.55rem .9rem;border-radius:999px}
+.tel:hover{background:var(--deep);color:var(--sky)}
+.hero{padding:2.5rem 0 2rem}
+.hero h1{font-weight:800;font-size:clamp(2.6rem,8vw,5.2rem);line-height:.98;letter-spacing:-.02em;max-width:15ch}
+.hero p{font-size:1.2rem;max-width:34rem;margin-top:1rem;color:var(--muted)}
+.ask{background:var(--white);border-radius:22px;padding:1.5rem;margin:1rem 0 3rem;display:grid;gap:1rem}
+.ask h2{font-weight:800;font-size:1.6rem;line-height:1.1}
+.fields{display:grid;grid-template-columns:1fr;gap:.75rem}
+label{display:grid;gap:.3rem;font-weight:600;font-size:.95rem}
+input,select{font:inherit;padding:.7rem .8rem;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--deep)}
+input:focus,select:focus{border-color:var(--teal);outline:none}
+.go{justify-self:start;background:var(--teal);color:#fff;border:0;font:600 1.05rem "Bricolage Grotesque",sans-serif;padding:.85rem 1.3rem;border-radius:999px;cursor:pointer;text-decoration:none}
+.go:hover{background:var(--deep)}
+#resumen{display:none;background:var(--sky);border-radius:12px;padding:1rem}
+#resumen.on{display:block}
+.cols{display:grid;grid-template-columns:1fr;gap:2.5rem;padding-bottom:3rem}
+.cols h2{font-weight:800;font-size:1.6rem;margin-bottom:.6rem}
+.hours div{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--line);max-width:24rem}
+blockquote{font-size:1.4rem;line-height:1.35;font-weight:600;max-width:28rem}
+blockquote footer{font-size:.95rem;font-weight:400;color:var(--muted);margin-top:.4rem}
+iframe{width:100%;height:300px;border:0;border-radius:22px}
+.foot{padding:1.5rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (min-width:760px){.fields{grid-template-columns:1fr 1fr 1.4fr}.cols{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="name" href="#">Citroën Warnes</a>
+    <a class="tel" href="tel:+541148541095">4854-1095</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Repuestos y taller para tu Citroën.</h1>
+    <p>En Darwin 37, a metros de Av. Warnes. Te asesoramos sobre la pieza que necesitás y te pasamos el precio.</p>
+  </header>
+
+  <form class="ask" id="consulta" onsubmit="return armar(event)">
+    <h2>Consultá por tu repuesto</h2>
+    <div class="fields">
+      <label>Modelo
+        <select id="modelo" required>
+          <option value="">Elegí el modelo</option>
+          <option>C3</option><option>C4</option><option>C4 Cactus</option><option>C5</option>
+          <option>Berlingo</option><option>Xsara Picasso</option><option>Otro</option>
+        </select>
+      </label>
+      <label>Año<input id="anio" inputmode="numeric" placeholder="Ej.: 2014" maxlength="4"></label>
+      <label>Repuesto que buscás<input id="pieza" required placeholder="Ej.: kit de distribución"></label>
+    </div>
+    <button class="go" type="submit">Preparar consulta</button>
+    <div id="resumen" role="status" aria-live="polite"></div>
+  </form>
+
+  <div class="cols">
+    <section>
+      <h2>Horarios</h2>
+      <div class="hours">
+        <div><span>Lunes a viernes</span><strong>8 a 18 h</strong></div>
+        <div><span>Sábados</span><strong>8 a 14 h</strong></div>
+        <div><span>Domingos</span><strong>Cerrado</strong></div>
+      </div>
+    </section>
+    <section>
+      <h2>Clientes</h2>
+      <blockquote>“Muy buena atención y precios acorde a estos momentos.”<footer>Reseña en Google</footer></blockquote>
+    </section>
+    <section style="grid-column:1/-1">
+      <h2>Darwin 37, Villa Crespo</h2>
+      <iframe title="Mapa de Citroën Warnes" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-58.4552%2C-34.6012%2C-58.4472%2C-34.5962&layer=mapnik&marker=-34.598671%2C-58.451179"></iframe>
+      <p style="margin-top:.6rem"><a href="https://www.google.com/maps/dir/?api=1&destination=-34.598671,-58.451179">Cómo llegar</a> · La zona tiene poco estacionamiento: conviene venir con tiempo.</p>
+    </section>
+  </div>
+
+  <p class="foot">Citroën Warnes · Darwin 37, Villa Crespo, CABA · <a href="tel:+541148541095">(011) 4854-1095</a> · Comercio independiente de repuestos.</p>
+</div>
+<script>
+function armar(e){
+  e.preventDefault();
+  var m=document.getElementById('modelo').value, a=document.getElementById('anio').value.trim(), p=document.getElementById('pieza').value.trim();
+  var r=document.getElementById('resumen');
+  r.innerHTML='<p><strong>Tu consulta:</strong> '+esc(p)+' para Citroën '+esc(m)+(a?' '+esc(a):'')+'.</p><p style="margin-top:.6rem">Llamanos y leé este texto para que te confirmemos stock y precio.</p><p style="margin-top:.8rem"><a class="go" href="tel:+541148541095">Llamar al 4854-1095</a></p>';
+  r.classList.add('on'); return false;
+}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+</script>
+</body>
+</html>
